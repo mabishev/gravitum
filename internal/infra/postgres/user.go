@@ -63,11 +63,6 @@ func (r *UserRepository) GetByID(ctx context.Context, id uuid.UUID) (user.User, 
 	}
 
 	if err != nil {
-		// var pgErr *pgconn.PgError
-		// if errors.As(err, &pgErr) && pgErr.Code == "20000" {
-		// 	return user.User{}, user.ErrNotFound
-		// }
-
 		return user.User{}, err
 	}
 
